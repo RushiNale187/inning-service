@@ -1,0 +1,5 @@
+package com.abc.inning.repository;
+
+public interface ProductRepository {
+
+}

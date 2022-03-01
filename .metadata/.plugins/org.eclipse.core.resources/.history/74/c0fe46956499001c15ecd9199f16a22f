@@ -1,0 +1,7 @@
+server.port = 8090
+spring.datasource.url=jdbc:postgresql://localhost:5432/mydb
+spring.datasource.username=rutvik
+spring.datasource.password=rutvik
+spring.jpa.hibernate.ddl-auto=update
+server.servlet.context-path=/worldcup
+spring.mvc.pathmatch.matching-strategy=ant-path-matcher

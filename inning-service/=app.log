@@ -1,0 +1,993 @@
+2022-03-01 19:06:59,381 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 1164 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 19:06:59,382 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 19:07:01,586 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 19:07:01,586 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 19:07:01,711 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 19:07:02,025 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 19:07:02,080 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-03-01 19:07:02,261 INFO org.hibernate.annotations.common.Version [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-01 19:07:02,376 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2022-03-01 19:07:02,578 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2022-03-01 19:07:02,612 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 19:07:03,328 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 19:07:04,631 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown initiated...
+2022-03-01 19:07:04,637 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown completed.
+2022-03-01 19:07:04,659 INFO org.apache.catalina.core.StandardService [restartedMain] Stopping service [Tomcat]
+2022-03-01 19:07:04,703 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException: Cannot invoke "org.springframework.web.servlet.mvc.condition.PatternsRequestCondition.getPatterns()" because "this.condition" is null
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:181)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:935)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at com.abc.inning.InningServiceApplication.main(InningServiceApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.NullPointerException: Cannot invoke "org.springframework.web.servlet.mvc.condition.PatternsRequestCondition.getPatterns()" because "this.condition" is null
+	at springfox.documentation.spring.web.WebMvcPatternsRequestConditionWrapper.getPatterns(WebMvcPatternsRequestConditionWrapper.java:56)
+	at springfox.documentation.RequestHandler.sortedPaths(RequestHandler.java:113)
+	at springfox.documentation.spi.service.contexts.Orderings.lambda$byPatternsCondition$3(Orderings.java:89)
+	at java.base/java.util.Comparator.lambda$comparing$77a9974f$1(Comparator.java:473)
+	at java.base/java.util.TimSort.countRunAndMakeAscending(TimSort.java:355)
+	at java.base/java.util.TimSort.sort(TimSort.java:220)
+	at java.base/java.util.Arrays.sort(Arrays.java:1307)
+	at java.base/java.util.ArrayList.sort(ArrayList.java:1721)
+	at java.base/java.util.stream.SortedOps$RefSortingSink.end(SortedOps.java:392)
+	at java.base/java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.base/java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.base/java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.base/java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at springfox.documentation.spring.web.plugins.WebMvcRequestHandlerProvider.requestHandlers(WebMvcRequestHandlerProvider.java:81)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.withDefaults(AbstractDocumentationPluginsBootstrapper.java:107)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.buildContext(AbstractDocumentationPluginsBootstrapper.java:91)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.bootstrapDocumentationPlugins(AbstractDocumentationPluginsBootstrapper.java:82)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:100)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178)
+	... 19 common frames omitted
+2022-03-01 19:15:54,440 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 2980 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 19:15:54,442 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 19:15:56,674 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 19:15:56,675 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 19:15:56,877 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 19:15:57,182 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 19:15:57,249 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-03-01 19:15:57,422 INFO org.hibernate.annotations.common.Version [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-01 19:15:57,537 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2022-03-01 19:15:57,730 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2022-03-01 19:15:57,764 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 19:15:58,612 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 19:15:59,830 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown initiated...
+2022-03-01 19:15:59,837 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown completed.
+2022-03-01 19:15:59,857 INFO org.apache.catalina.core.StandardService [restartedMain] Stopping service [Tomcat]
+2022-03-01 19:15:59,899 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException: Cannot invoke "org.springframework.web.servlet.mvc.condition.PatternsRequestCondition.getPatterns()" because "this.condition" is null
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:181)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:935)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at com.abc.inning.InningServiceApplication.main(InningServiceApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.NullPointerException: Cannot invoke "org.springframework.web.servlet.mvc.condition.PatternsRequestCondition.getPatterns()" because "this.condition" is null
+	at springfox.documentation.spring.web.WebMvcPatternsRequestConditionWrapper.getPatterns(WebMvcPatternsRequestConditionWrapper.java:56)
+	at springfox.documentation.RequestHandler.sortedPaths(RequestHandler.java:113)
+	at springfox.documentation.spi.service.contexts.Orderings.lambda$byPatternsCondition$3(Orderings.java:89)
+	at java.base/java.util.Comparator.lambda$comparing$77a9974f$1(Comparator.java:473)
+	at java.base/java.util.TimSort.countRunAndMakeAscending(TimSort.java:355)
+	at java.base/java.util.TimSort.sort(TimSort.java:220)
+	at java.base/java.util.Arrays.sort(Arrays.java:1307)
+	at java.base/java.util.ArrayList.sort(ArrayList.java:1721)
+	at java.base/java.util.stream.SortedOps$RefSortingSink.end(SortedOps.java:392)
+	at java.base/java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.base/java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.base/java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.base/java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at springfox.documentation.spring.web.plugins.WebMvcRequestHandlerProvider.requestHandlers(WebMvcRequestHandlerProvider.java:81)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.withDefaults(AbstractDocumentationPluginsBootstrapper.java:107)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.buildContext(AbstractDocumentationPluginsBootstrapper.java:91)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.bootstrapDocumentationPlugins(AbstractDocumentationPluginsBootstrapper.java:82)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:100)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178)
+	... 19 common frames omitted
+2022-03-01 19:21:16,315 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 772 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 19:21:16,316 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 19:21:18,307 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 19:21:18,308 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 19:21:18,406 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 19:21:18,708 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 19:21:18,767 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-03-01 19:21:18,939 INFO org.hibernate.annotations.common.Version [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-01 19:21:19,063 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2022-03-01 19:21:19,275 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2022-03-01 19:21:19,308 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 19:21:20,033 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 19:21:21,208 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown initiated...
+2022-03-01 19:21:21,216 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown completed.
+2022-03-01 19:21:21,232 INFO org.apache.catalina.core.StandardService [restartedMain] Stopping service [Tomcat]
+2022-03-01 19:21:21,279 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException: Cannot invoke "org.springframework.web.servlet.mvc.condition.PatternsRequestCondition.getPatterns()" because "this.condition" is null
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:181)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:935)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at com.abc.inning.InningServiceApplication.main(InningServiceApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.NullPointerException: Cannot invoke "org.springframework.web.servlet.mvc.condition.PatternsRequestCondition.getPatterns()" because "this.condition" is null
+	at springfox.documentation.spring.web.WebMvcPatternsRequestConditionWrapper.getPatterns(WebMvcPatternsRequestConditionWrapper.java:56)
+	at springfox.documentation.RequestHandler.sortedPaths(RequestHandler.java:113)
+	at springfox.documentation.spi.service.contexts.Orderings.lambda$byPatternsCondition$3(Orderings.java:89)
+	at java.base/java.util.Comparator.lambda$comparing$77a9974f$1(Comparator.java:473)
+	at java.base/java.util.TimSort.countRunAndMakeAscending(TimSort.java:355)
+	at java.base/java.util.TimSort.sort(TimSort.java:220)
+	at java.base/java.util.Arrays.sort(Arrays.java:1307)
+	at java.base/java.util.ArrayList.sort(ArrayList.java:1721)
+	at java.base/java.util.stream.SortedOps$RefSortingSink.end(SortedOps.java:392)
+	at java.base/java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.base/java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.base/java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.base/java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at springfox.documentation.spring.web.plugins.WebMvcRequestHandlerProvider.requestHandlers(WebMvcRequestHandlerProvider.java:81)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.withDefaults(AbstractDocumentationPluginsBootstrapper.java:107)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.buildContext(AbstractDocumentationPluginsBootstrapper.java:91)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.bootstrapDocumentationPlugins(AbstractDocumentationPluginsBootstrapper.java:82)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:100)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178)
+	... 19 common frames omitted
+2022-03-01 19:24:58,316 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 10432 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 19:24:58,318 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 19:25:00,040 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 19:25:00,040 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 19:25:00,146 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 19:25:00,340 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 19:25:00,394 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-03-01 19:25:00,563 INFO org.hibernate.annotations.common.Version [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-01 19:25:00,672 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2022-03-01 19:25:00,880 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2022-03-01 19:25:00,912 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 19:25:01,623 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 19:25:02,814 INFO com.abc.inning.InningServiceApplication [restartedMain] Started InningServiceApplication in 4.935 seconds (JVM running for 5.86)
+2022-03-01 19:25:20,544 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [http-nio-8090-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-01 19:29:48,036 INFO com.zaxxer.hikari.HikariDataSource [Thread-1] HikariPool-1 - Shutdown initiated...
+2022-03-01 19:29:48,042 INFO com.zaxxer.hikari.HikariDataSource [Thread-1] HikariPool-1 - Shutdown completed.
+2022-03-01 19:29:48,131 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 10432 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 19:29:48,131 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 19:29:48,657 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 19:29:48,657 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 19:29:48,825 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 19:29:48,867 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 19:29:48,873 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Starting...
+2022-03-01 19:29:48,926 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Start completed.
+2022-03-01 19:29:48,926 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 19:29:49,184 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 19:29:49,574 INFO com.abc.inning.InningServiceApplication [restartedMain] Started InningServiceApplication in 1.474 seconds (JVM running for 292.619)
+2022-03-01 19:30:20,720 INFO com.zaxxer.hikari.HikariDataSource [Thread-5] HikariPool-2 - Shutdown initiated...
+2022-03-01 19:30:20,726 INFO com.zaxxer.hikari.HikariDataSource [Thread-5] HikariPool-2 - Shutdown completed.
+2022-03-01 19:30:20,826 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 10432 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 19:30:20,827 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 19:30:21,202 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 19:30:21,202 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 19:30:21,241 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 19:30:21,270 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 19:30:21,275 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-3 - Starting...
+2022-03-01 19:30:21,325 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-3 - Start completed.
+2022-03-01 19:30:21,325 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 19:30:21,406 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 19:30:21,778 INFO com.abc.inning.InningServiceApplication [restartedMain] Started InningServiceApplication in 0.989 seconds (JVM running for 324.823)
+2022-03-01 19:32:02,546 INFO com.zaxxer.hikari.HikariDataSource [Thread-9] HikariPool-3 - Shutdown initiated...
+2022-03-01 19:32:02,558 INFO com.zaxxer.hikari.HikariDataSource [Thread-9] HikariPool-3 - Shutdown completed.
+2022-03-01 19:32:02,645 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 10432 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 19:32:02,645 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 19:32:03,042 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 19:32:03,042 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 19:32:03,119 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 19:32:03,151 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 19:32:03,158 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-4 - Starting...
+2022-03-01 19:32:03,209 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-4 - Start completed.
+2022-03-01 19:32:03,210 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 19:32:03,252 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 19:32:03,656 INFO com.abc.inning.InningServiceApplication [restartedMain] Started InningServiceApplication in 1.041 seconds (JVM running for 426.702)
+2022-03-01 19:32:59,179 INFO com.zaxxer.hikari.HikariDataSource [Thread-13] HikariPool-4 - Shutdown initiated...
+2022-03-01 19:32:59,185 INFO com.zaxxer.hikari.HikariDataSource [Thread-13] HikariPool-4 - Shutdown completed.
+2022-03-01 19:32:59,265 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 10432 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 19:32:59,265 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 19:32:59,644 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 19:32:59,644 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 19:32:59,698 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 19:32:59,728 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 19:32:59,732 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-5 - Starting...
+2022-03-01 19:32:59,781 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-5 - Start completed.
+2022-03-01 19:32:59,781 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 19:32:59,825 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 19:33:00,105 INFO com.abc.inning.InningServiceApplication [restartedMain] Started InningServiceApplication in 0.868 seconds (JVM running for 483.151)
+2022-03-01 19:33:06,623 INFO com.zaxxer.hikari.HikariDataSource [Thread-17] HikariPool-5 - Shutdown initiated...
+2022-03-01 19:33:06,635 INFO com.zaxxer.hikari.HikariDataSource [Thread-17] HikariPool-5 - Shutdown completed.
+2022-03-01 19:33:06,748 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 10432 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 19:33:06,748 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 19:33:07,272 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 19:33:07,272 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 19:33:07,305 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 19:33:07,335 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 19:33:07,341 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-6 - Starting...
+2022-03-01 19:33:07,391 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-6 - Start completed.
+2022-03-01 19:33:07,391 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 19:33:07,440 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 19:33:07,782 INFO com.abc.inning.InningServiceApplication [restartedMain] Started InningServiceApplication in 1.079 seconds (JVM running for 490.828)
+2022-03-01 19:33:48,179 INFO com.zaxxer.hikari.HikariDataSource [Thread-21] HikariPool-6 - Shutdown initiated...
+2022-03-01 19:33:48,183 INFO com.zaxxer.hikari.HikariDataSource [Thread-21] HikariPool-6 - Shutdown completed.
+2022-03-01 19:33:48,267 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 10432 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 19:33:48,268 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 19:33:48,629 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 19:33:48,629 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 19:33:48,662 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 19:33:48,692 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 19:33:48,697 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-7 - Starting...
+2022-03-01 19:33:48,746 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-7 - Start completed.
+2022-03-01 19:33:48,746 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 19:33:48,786 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 19:33:49,133 INFO com.abc.inning.InningServiceApplication [restartedMain] Started InningServiceApplication in 0.894 seconds (JVM running for 532.178)
+2022-03-01 19:34:59,839 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [http-nio-8090-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-01 19:40:01,595 INFO com.zaxxer.hikari.HikariDataSource [Thread-25] HikariPool-7 - Shutdown initiated...
+2022-03-01 19:40:01,604 INFO com.zaxxer.hikari.HikariDataSource [Thread-25] HikariPool-7 - Shutdown completed.
+2022-03-01 19:40:01,699 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 10432 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 19:40:01,699 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 19:40:02,097 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 19:40:02,097 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 19:40:02,120 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 19:40:02,153 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 19:40:02,158 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-8 - Starting...
+2022-03-01 19:40:02,212 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-8 - Start completed.
+2022-03-01 19:40:02,212 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 19:40:02,261 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 19:40:02,681 INFO com.abc.inning.InningServiceApplication [restartedMain] Started InningServiceApplication in 1.016 seconds (JVM running for 905.727)
+2022-03-01 19:40:39,888 INFO com.zaxxer.hikari.HikariDataSource [Thread-29] HikariPool-8 - Shutdown initiated...
+2022-03-01 19:40:39,895 INFO com.zaxxer.hikari.HikariDataSource [Thread-29] HikariPool-8 - Shutdown completed.
+2022-03-01 19:40:39,975 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 10432 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 19:40:39,976 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 19:40:40,338 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 19:40:40,339 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 19:40:40,754 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 19:40:40,783 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 19:40:40,789 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-9 - Starting...
+2022-03-01 19:40:40,839 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-9 - Start completed.
+2022-03-01 19:40:40,840 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 19:40:40,892 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 19:40:41,186 INFO com.abc.inning.InningServiceApplication [restartedMain] Started InningServiceApplication in 1.237 seconds (JVM running for 944.232)
+2022-03-01 19:43:24,443 INFO com.zaxxer.hikari.HikariDataSource [Thread-33] HikariPool-9 - Shutdown initiated...
+2022-03-01 19:43:24,449 INFO com.zaxxer.hikari.HikariDataSource [Thread-33] HikariPool-9 - Shutdown completed.
+2022-03-01 19:43:24,534 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 10432 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 19:43:24,534 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 19:43:25,060 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 19:43:25,060 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 19:43:25,110 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 19:43:25,148 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 19:43:25,153 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-10 - Starting...
+2022-03-01 19:43:25,205 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-10 - Start completed.
+2022-03-01 19:43:25,205 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 19:43:25,251 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 19:43:25,586 INFO com.abc.inning.InningServiceApplication [restartedMain] Started InningServiceApplication in 1.081 seconds (JVM running for 1108.631)
+2022-03-01 19:43:38,112 INFO com.zaxxer.hikari.HikariDataSource [Thread-37] HikariPool-10 - Shutdown initiated...
+2022-03-01 19:43:38,118 INFO com.zaxxer.hikari.HikariDataSource [Thread-37] HikariPool-10 - Shutdown completed.
+2022-03-01 19:43:38,293 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 10432 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 19:43:38,295 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 19:43:38,699 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 19:43:38,699 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 19:43:38,731 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 19:43:38,759 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 19:43:38,764 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-11 - Starting...
+2022-03-01 19:43:38,812 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-11 - Start completed.
+2022-03-01 19:43:38,812 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 19:43:38,850 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 19:43:39,176 INFO com.abc.inning.InningServiceApplication [restartedMain] Started InningServiceApplication in 0.93 seconds (JVM running for 1122.221)
+2022-03-01 19:45:51,844 INFO com.zaxxer.hikari.HikariDataSource [Thread-41] HikariPool-11 - Shutdown initiated...
+2022-03-01 19:45:51,854 INFO com.zaxxer.hikari.HikariDataSource [Thread-41] HikariPool-11 - Shutdown completed.
+2022-03-01 19:45:51,942 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 10432 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 19:45:51,942 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 19:45:52,313 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 19:45:52,314 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 19:45:52,349 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 19:45:52,379 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 19:45:52,383 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-12 - Starting...
+2022-03-01 19:45:52,439 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-12 - Start completed.
+2022-03-01 19:45:52,439 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 19:45:52,505 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 19:45:52,803 INFO com.abc.inning.InningServiceApplication [restartedMain] Started InningServiceApplication in 0.887 seconds (JVM running for 1255.848)
+2022-03-01 19:47:40,612 INFO com.zaxxer.hikari.HikariDataSource [Thread-45] HikariPool-12 - Shutdown initiated...
+2022-03-01 19:47:40,617 INFO com.zaxxer.hikari.HikariDataSource [Thread-45] HikariPool-12 - Shutdown completed.
+2022-03-01 19:47:40,699 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 10432 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 19:47:40,700 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 19:47:41,214 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 19:47:41,214 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 19:47:41,245 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 19:47:41,274 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 19:47:41,279 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-13 - Starting...
+2022-03-01 19:47:41,331 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-13 - Start completed.
+2022-03-01 19:47:41,331 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 19:47:41,372 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 19:47:41,652 INFO com.abc.inning.InningServiceApplication [restartedMain] Started InningServiceApplication in 0.977 seconds (JVM running for 1364.697)
+2022-03-01 19:48:11,835 INFO com.zaxxer.hikari.HikariDataSource [Thread-49] HikariPool-13 - Shutdown initiated...
+2022-03-01 19:48:11,841 INFO com.zaxxer.hikari.HikariDataSource [Thread-49] HikariPool-13 - Shutdown completed.
+2022-03-01 19:48:11,926 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 10432 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 19:48:11,926 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 19:48:12,284 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 19:48:12,284 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 19:48:12,310 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 19:48:12,338 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 19:48:12,343 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-14 - Starting...
+2022-03-01 19:48:12,392 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-14 - Start completed.
+2022-03-01 19:48:12,393 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 19:48:12,430 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 19:48:12,724 INFO com.abc.inning.InningServiceApplication [restartedMain] Started InningServiceApplication in 0.825 seconds (JVM running for 1395.769)
+2022-03-01 19:48:32,688 INFO com.zaxxer.hikari.HikariDataSource [Thread-53] HikariPool-14 - Shutdown initiated...
+2022-03-01 19:48:32,693 INFO com.zaxxer.hikari.HikariDataSource [Thread-53] HikariPool-14 - Shutdown completed.
+2022-03-01 19:48:32,774 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 10432 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 19:48:32,774 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 19:48:33,143 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 19:48:33,143 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 19:48:33,286 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 19:48:33,317 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 19:48:33,322 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-15 - Starting...
+2022-03-01 19:48:33,377 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-15 - Start completed.
+2022-03-01 19:48:33,377 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 19:48:33,418 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 19:48:33,812 INFO com.abc.inning.InningServiceApplication [restartedMain] Started InningServiceApplication in 1.064 seconds (JVM running for 1416.858)
+2022-03-01 19:48:38,431 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [http-nio-8090-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-01 19:51:08,803 INFO com.zaxxer.hikari.HikariDataSource [Thread-57] HikariPool-15 - Shutdown initiated...
+2022-03-01 19:51:08,808 INFO com.zaxxer.hikari.HikariDataSource [Thread-57] HikariPool-15 - Shutdown completed.
+2022-03-01 19:51:08,897 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 10432 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 19:51:08,898 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 19:51:09,286 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 19:51:09,286 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 19:51:09,313 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 19:51:09,345 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 19:51:09,351 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-16 - Starting...
+2022-03-01 19:51:09,402 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-16 - Start completed.
+2022-03-01 19:51:09,402 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 19:51:09,443 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 19:51:09,925 INFO com.abc.inning.InningServiceApplication [restartedMain] Started InningServiceApplication in 1.058 seconds (JVM running for 1572.97)
+2022-03-01 19:51:18,494 INFO com.zaxxer.hikari.HikariDataSource [Thread-61] HikariPool-16 - Shutdown initiated...
+2022-03-01 19:51:18,498 INFO com.zaxxer.hikari.HikariDataSource [Thread-61] HikariPool-16 - Shutdown completed.
+2022-03-01 19:51:18,584 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 10432 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 19:51:18,585 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 19:51:18,961 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 19:51:18,962 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 19:51:19,002 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 19:51:19,034 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 19:51:19,038 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-17 - Starting...
+2022-03-01 19:51:19,196 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-17 - Start completed.
+2022-03-01 19:51:19,196 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 19:51:19,234 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 19:51:19,546 INFO com.abc.inning.InningServiceApplication [restartedMain] Started InningServiceApplication in 0.987 seconds (JVM running for 1582.592)
+2022-03-01 19:52:33,708 INFO com.zaxxer.hikari.HikariDataSource [Thread-65] HikariPool-17 - Shutdown initiated...
+2022-03-01 19:52:33,714 INFO com.zaxxer.hikari.HikariDataSource [Thread-65] HikariPool-17 - Shutdown completed.
+2022-03-01 19:52:33,802 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 10432 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 19:52:33,803 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 19:52:34,158 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 19:52:34,159 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 19:52:34,293 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 19:52:34,323 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 19:52:34,328 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-18 - Starting...
+2022-03-01 19:52:34,383 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-18 - Start completed.
+2022-03-01 19:52:34,383 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 19:52:34,422 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 19:52:34,725 INFO com.abc.inning.InningServiceApplication [restartedMain] Started InningServiceApplication in 0.949 seconds (JVM running for 1657.77)
+2022-03-01 19:54:14,509 INFO com.zaxxer.hikari.HikariDataSource [Thread-69] HikariPool-18 - Shutdown initiated...
+2022-03-01 19:54:14,517 INFO com.zaxxer.hikari.HikariDataSource [Thread-69] HikariPool-18 - Shutdown completed.
+2022-03-01 19:54:14,629 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 10432 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 19:54:14,629 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 19:54:14,995 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 19:54:14,995 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 19:54:15,016 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 19:54:15,046 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 19:54:15,051 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-19 - Starting...
+2022-03-01 19:54:15,103 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-19 - Start completed.
+2022-03-01 19:54:15,103 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 19:54:15,146 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 19:54:15,470 INFO com.abc.inning.InningServiceApplication [restartedMain] Started InningServiceApplication in 0.88 seconds (JVM running for 1758.516)
+2022-03-01 19:55:12,109 INFO com.zaxxer.hikari.HikariDataSource [Thread-73] HikariPool-19 - Shutdown initiated...
+2022-03-01 19:55:12,115 INFO com.zaxxer.hikari.HikariDataSource [Thread-73] HikariPool-19 - Shutdown completed.
+2022-03-01 19:55:12,198 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 10432 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 19:55:12,198 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 19:55:12,570 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 19:55:12,570 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 19:55:12,594 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 19:55:12,628 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 19:55:12,633 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-20 - Starting...
+2022-03-01 19:55:12,684 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-20 - Start completed.
+2022-03-01 19:55:12,684 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 19:55:12,730 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 19:55:13,134 INFO com.abc.inning.InningServiceApplication [restartedMain] Started InningServiceApplication in 0.962 seconds (JVM running for 1816.18)
+2022-03-01 19:57:22,613 INFO com.zaxxer.hikari.HikariDataSource [Thread-77] HikariPool-20 - Shutdown initiated...
+2022-03-01 19:57:22,617 INFO com.zaxxer.hikari.HikariDataSource [Thread-77] HikariPool-20 - Shutdown completed.
+2022-03-01 19:57:22,701 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 10432 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 19:57:22,701 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 19:57:23,055 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 19:57:23,055 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 19:57:23,076 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 19:57:23,104 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 19:57:23,109 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-21 - Starting...
+2022-03-01 19:57:23,159 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-21 - Start completed.
+2022-03-01 19:57:23,159 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 19:57:23,196 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 19:57:23,487 INFO com.abc.inning.InningServiceApplication [restartedMain] Started InningServiceApplication in 0.81 seconds (JVM running for 1946.532)
+2022-03-01 19:58:21,363 INFO com.zaxxer.hikari.HikariDataSource [Thread-81] HikariPool-21 - Shutdown initiated...
+2022-03-01 19:58:21,369 INFO com.zaxxer.hikari.HikariDataSource [Thread-81] HikariPool-21 - Shutdown completed.
+2022-03-01 19:58:21,454 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 10432 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 19:58:21,454 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 19:58:21,809 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 19:58:21,810 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 19:58:21,830 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 19:58:21,858 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 19:58:21,864 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-22 - Starting...
+2022-03-01 19:58:21,913 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-22 - Start completed.
+2022-03-01 19:58:21,913 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 19:58:21,947 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 19:58:22,224 INFO com.abc.inning.InningServiceApplication [restartedMain] Started InningServiceApplication in 0.795 seconds (JVM running for 2005.269)
+2022-03-01 19:58:25,677 INFO com.zaxxer.hikari.HikariDataSource [Thread-85] HikariPool-22 - Shutdown initiated...
+2022-03-01 19:58:25,681 INFO com.zaxxer.hikari.HikariDataSource [Thread-85] HikariPool-22 - Shutdown completed.
+2022-03-01 19:58:25,763 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 10432 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 19:58:25,763 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 19:58:26,114 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 19:58:26,114 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 19:58:26,135 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 19:58:26,167 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 19:58:26,171 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-23 - Starting...
+2022-03-01 19:58:26,215 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-23 - Start completed.
+2022-03-01 19:58:26,216 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 19:58:26,250 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 19:58:26,495 INFO com.abc.inning.InningServiceApplication [restartedMain] Started InningServiceApplication in 0.756 seconds (JVM running for 2009.541)
+2022-03-01 20:04:23,509 INFO com.zaxxer.hikari.HikariDataSource [Thread-89] HikariPool-23 - Shutdown initiated...
+2022-03-01 20:04:23,516 INFO com.zaxxer.hikari.HikariDataSource [Thread-89] HikariPool-23 - Shutdown completed.
+2022-03-01 20:04:23,619 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 10432 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 20:04:23,620 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 20:04:24,014 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 20:04:24,015 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 20:04:24,035 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 20:04:24,072 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 20:04:24,077 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-24 - Starting...
+2022-03-01 20:04:24,126 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-24 - Start completed.
+2022-03-01 20:04:24,127 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 20:04:24,167 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 20:04:24,578 INFO com.abc.inning.InningServiceApplication [restartedMain] Started InningServiceApplication in 0.99 seconds (JVM running for 2367.624)
+2022-03-01 20:04:40,374 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [http-nio-8090-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-01 20:04:59,897 ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup].[dispatcherServlet] [http-nio-8090-exec-7] Servlet.service() for servlet [dispatcherServlet] in context with path [/worldcup] threw exception [Request processing failed; nested exception is com.abc.inning.exception.InningNotFoundException: Inning not existing with id :0] with root cause
+com.abc.inning.exception.InningNotFoundException: Inning not existing with id :0
+	at com.abc.inning.service.InningServiceImpl.getInningById(InningServiceImpl.java:41) ~[classes/:na]
+	at com.abc.inning.controller.InningController.getInningDetailsById(InningController.java:43) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.58.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.58.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:359) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1735) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+2022-03-01 20:07:24,961 INFO com.zaxxer.hikari.HikariDataSource [Thread-93] HikariPool-24 - Shutdown initiated...
+2022-03-01 20:07:24,968 INFO com.zaxxer.hikari.HikariDataSource [Thread-93] HikariPool-24 - Shutdown completed.
+2022-03-01 20:07:25,059 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 10432 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 20:07:25,059 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 20:07:25,419 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 20:07:25,419 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 20:07:25,440 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 20:07:25,467 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 20:07:25,472 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-25 - Starting...
+2022-03-01 20:07:25,520 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-25 - Start completed.
+2022-03-01 20:07:25,520 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 20:07:25,557 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 20:07:25,842 INFO com.abc.inning.InningServiceApplication [restartedMain] Started InningServiceApplication in 0.811 seconds (JVM running for 2548.888)
+2022-03-01 20:09:50,695 INFO com.zaxxer.hikari.HikariDataSource [Thread-97] HikariPool-25 - Shutdown initiated...
+2022-03-01 20:09:50,702 INFO com.zaxxer.hikari.HikariDataSource [Thread-97] HikariPool-25 - Shutdown completed.
+2022-03-01 20:09:50,790 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 10432 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 20:09:50,790 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 20:09:51,189 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 20:09:51,189 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 20:09:51,210 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 20:09:51,240 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 20:09:51,244 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-26 - Starting...
+2022-03-01 20:09:51,294 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-26 - Start completed.
+2022-03-01 20:09:51,295 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 20:09:51,335 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 20:09:51,627 INFO com.abc.inning.InningServiceApplication [restartedMain] Started InningServiceApplication in 0.861 seconds (JVM running for 2694.673)
+2022-03-01 20:10:03,710 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [http-nio-8090-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-01 20:10:09,532 ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup].[dispatcherServlet] [http-nio-8090-exec-6] Servlet.service() for servlet [dispatcherServlet] in context with path [/worldcup] threw exception [Request processing failed; nested exception is com.abc.inning.exception.InningNotFoundException: Inning not existing with id :0] with root cause
+com.abc.inning.exception.InningNotFoundException: Inning not existing with id :0
+	at com.abc.inning.service.InningServiceImpl.getInningById(InningServiceImpl.java:41) ~[classes/:na]
+	at com.abc.inning.controller.InningController.getInningDetailsById(InningController.java:43) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.58.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.58.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:359) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1735) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+2022-03-01 20:11:59,489 INFO com.zaxxer.hikari.HikariDataSource [Thread-101] HikariPool-26 - Shutdown initiated...
+2022-03-01 20:11:59,504 INFO com.zaxxer.hikari.HikariDataSource [Thread-101] HikariPool-26 - Shutdown completed.
+2022-03-01 20:11:59,675 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 10432 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 20:11:59,676 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 20:12:00,241 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 20:12:00,241 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 20:12:00,262 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 20:12:00,290 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 20:12:00,294 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-27 - Starting...
+2022-03-01 20:12:00,343 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-27 - Start completed.
+2022-03-01 20:12:00,343 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 20:12:00,376 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 20:12:00,840 INFO com.abc.inning.InningServiceApplication [restartedMain] Started InningServiceApplication in 1.238 seconds (JVM running for 2823.886)
+2022-03-01 20:13:17,328 INFO com.zaxxer.hikari.HikariDataSource [Thread-105] HikariPool-27 - Shutdown initiated...
+2022-03-01 20:13:17,334 INFO com.zaxxer.hikari.HikariDataSource [Thread-105] HikariPool-27 - Shutdown completed.
+2022-03-01 20:13:17,448 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 10432 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 20:13:17,448 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 20:13:18,035 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 20:13:18,036 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 20:13:18,077 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 20:13:18,106 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 20:13:18,111 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-28 - Starting...
+2022-03-01 20:13:18,160 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-28 - Start completed.
+2022-03-01 20:13:18,160 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 20:13:18,195 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 20:13:18,557 INFO com.abc.inning.InningServiceApplication [restartedMain] Started InningServiceApplication in 1.149 seconds (JVM running for 2901.603)
+2022-03-01 20:13:22,881 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [http-nio-8090-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-01 21:39:52,747 WARN com.zaxxer.hikari.pool.HikariPool [HikariPool-28 housekeeper] HikariPool-28 - Thread starvation or clock leap detected (housekeeper delta=38m33s725ms427µs800ns).
+2022-03-01 21:40:18,834 INFO com.zaxxer.hikari.HikariDataSource [Thread-109] HikariPool-28 - Shutdown initiated...
+2022-03-01 21:40:18,843 INFO com.zaxxer.hikari.HikariDataSource [Thread-109] HikariPool-28 - Shutdown completed.
+2022-03-01 21:40:19,045 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 10432 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 21:40:19,046 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 21:40:19,491 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 21:40:19,491 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 21:40:19,511 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 21:40:19,548 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 21:40:19,554 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-29 - Starting...
+2022-03-01 21:40:19,607 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-29 - Start completed.
+2022-03-01 21:40:19,607 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 21:40:19,651 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 21:40:19,997 INFO com.abc.inning.InningServiceApplication [restartedMain] Started InningServiceApplication in 1.06 seconds (JVM running for 8123.052)
+2022-03-01 21:40:40,788 INFO com.zaxxer.hikari.HikariDataSource [Thread-113] HikariPool-29 - Shutdown initiated...
+2022-03-01 21:40:40,793 INFO com.zaxxer.hikari.HikariDataSource [Thread-113] HikariPool-29 - Shutdown completed.
+2022-03-01 21:40:40,893 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 10432 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 21:40:40,893 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 21:40:41,316 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 21:40:41,316 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 21:40:41,337 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 21:40:41,365 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 21:40:41,370 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-30 - Starting...
+2022-03-01 21:40:41,418 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-30 - Start completed.
+2022-03-01 21:40:41,419 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 21:40:41,455 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 21:40:41,801 INFO com.abc.inning.InningServiceApplication [restartedMain] Started InningServiceApplication in 0.937 seconds (JVM running for 8144.856)
+2022-03-01 21:41:43,448 INFO com.zaxxer.hikari.HikariDataSource [Thread-117] HikariPool-30 - Shutdown initiated...
+2022-03-01 21:41:43,451 INFO com.zaxxer.hikari.HikariDataSource [Thread-117] HikariPool-30 - Shutdown completed.
+2022-03-01 21:41:43,543 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 10432 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 21:41:43,543 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 21:41:43,988 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 21:41:43,988 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 21:41:44,009 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 21:41:44,037 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 21:41:44,042 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-31 - Starting...
+2022-03-01 21:41:44,093 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-31 - Start completed.
+2022-03-01 21:41:44,093 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 21:41:44,130 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 21:41:44,455 INFO com.abc.inning.InningServiceApplication [restartedMain] Started InningServiceApplication in 0.938 seconds (JVM running for 8207.51)
+2022-03-01 21:43:42,710 INFO com.zaxxer.hikari.HikariDataSource [Thread-121] HikariPool-31 - Shutdown initiated...
+2022-03-01 21:43:42,717 INFO com.zaxxer.hikari.HikariDataSource [Thread-121] HikariPool-31 - Shutdown completed.
+2022-03-01 21:43:42,806 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 10432 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 21:43:42,806 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 21:43:43,218 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 21:43:43,218 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 21:43:43,239 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 21:43:43,268 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 21:43:43,273 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-32 - Starting...
+2022-03-01 21:43:43,322 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-32 - Start completed.
+2022-03-01 21:43:43,322 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 21:43:43,361 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 21:43:43,683 INFO com.abc.inning.InningServiceApplication [restartedMain] Started InningServiceApplication in 0.902 seconds (JVM running for 8326.738)
+2022-03-01 21:43:50,170 INFO com.zaxxer.hikari.HikariDataSource [Thread-125] HikariPool-32 - Shutdown initiated...
+2022-03-01 21:43:50,174 INFO com.zaxxer.hikari.HikariDataSource [Thread-125] HikariPool-32 - Shutdown completed.
+2022-03-01 21:43:50,261 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 10432 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 21:43:50,261 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 21:43:50,686 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 21:43:50,687 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 21:43:50,717 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 21:43:50,749 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 21:43:50,754 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-33 - Starting...
+2022-03-01 21:43:50,801 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-33 - Start completed.
+2022-03-01 21:43:50,801 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 21:43:50,843 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 21:43:51,190 INFO com.abc.inning.InningServiceApplication [restartedMain] Started InningServiceApplication in 0.955 seconds (JVM running for 8334.245)
+2022-03-01 21:44:24,369 INFO com.zaxxer.hikari.HikariDataSource [Thread-129] HikariPool-33 - Shutdown initiated...
+2022-03-01 21:44:24,374 INFO com.zaxxer.hikari.HikariDataSource [Thread-129] HikariPool-33 - Shutdown completed.
+2022-03-01 21:44:24,466 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 10432 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 21:44:24,466 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 21:44:24,880 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 21:44:24,880 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 21:44:24,901 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 21:44:24,929 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 21:44:24,933 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-34 - Starting...
+2022-03-01 21:44:25,098 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-34 - Start completed.
+2022-03-01 21:44:25,098 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 21:44:25,134 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 21:44:25,433 INFO com.abc.inning.InningServiceApplication [restartedMain] Started InningServiceApplication in 0.993 seconds (JVM running for 8368.488)
+2022-03-01 22:04:24,438 INFO com.zaxxer.hikari.HikariDataSource [Thread-133] HikariPool-34 - Shutdown initiated...
+2022-03-01 22:04:24,442 INFO com.zaxxer.hikari.HikariDataSource [Thread-133] HikariPool-34 - Shutdown completed.
+2022-03-01 22:04:24,528 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 10432 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 22:04:24,529 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 22:04:24,927 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 22:04:24,927 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 22:04:24,948 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 22:04:24,977 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 22:04:24,982 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-35 - Starting...
+2022-03-01 22:04:25,036 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-35 - Start completed.
+2022-03-01 22:04:25,037 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 22:04:25,074 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 22:04:25,482 INFO com.abc.inning.InningServiceApplication [restartedMain] Started InningServiceApplication in 0.981 seconds (JVM running for 9568.536)
+2022-03-01 22:04:32,139 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [http-nio-8090-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-01 22:05:46,055 INFO com.zaxxer.hikari.HikariDataSource [Thread-137] HikariPool-35 - Shutdown initiated...
+2022-03-01 22:05:46,060 INFO com.zaxxer.hikari.HikariDataSource [Thread-137] HikariPool-35 - Shutdown completed.
+2022-03-01 22:05:46,151 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 10432 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 22:05:46,151 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 22:05:46,549 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 22:05:46,550 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 22:05:46,664 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 22:05:46,694 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 22:05:46,699 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-36 - Starting...
+2022-03-01 22:05:46,861 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-36 - Start completed.
+2022-03-01 22:05:46,861 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 22:05:46,896 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 22:05:47,205 INFO com.abc.inning.InningServiceApplication [restartedMain] Started InningServiceApplication in 1.078 seconds (JVM running for 9650.26)
+2022-03-01 22:06:05,073 INFO com.zaxxer.hikari.HikariDataSource [Thread-141] HikariPool-36 - Shutdown initiated...
+2022-03-01 22:06:05,081 INFO com.zaxxer.hikari.HikariDataSource [Thread-141] HikariPool-36 - Shutdown completed.
+2022-03-01 22:06:05,172 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 10432 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 22:06:05,172 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 22:06:05,535 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 22:06:05,535 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 22:06:05,555 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 22:06:05,582 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 22:06:05,587 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-37 - Starting...
+2022-03-01 22:06:05,762 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-37 - Start completed.
+2022-03-01 22:06:05,762 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 22:06:05,796 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 22:06:06,115 INFO com.abc.inning.InningServiceApplication [restartedMain] Started InningServiceApplication in 0.967 seconds (JVM running for 9669.17)
+2022-03-01 22:09:14,938 INFO com.zaxxer.hikari.HikariDataSource [Thread-145] HikariPool-37 - Shutdown initiated...
+2022-03-01 22:09:14,943 INFO com.zaxxer.hikari.HikariDataSource [Thread-145] HikariPool-37 - Shutdown completed.
+2022-03-01 22:09:15,031 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 10432 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 22:09:15,031 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 22:09:15,440 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 22:09:15,440 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 22:09:15,460 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 22:09:15,487 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 22:09:15,491 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-38 - Starting...
+2022-03-01 22:09:15,651 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-38 - Start completed.
+2022-03-01 22:09:15,652 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 22:09:15,688 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 22:09:16,009 INFO com.abc.inning.InningServiceApplication [restartedMain] Started InningServiceApplication in 1.001 seconds (JVM running for 9859.064)
+2022-03-01 22:11:27,542 INFO com.zaxxer.hikari.HikariDataSource [Thread-149] HikariPool-38 - Shutdown initiated...
+2022-03-01 22:11:27,553 INFO com.zaxxer.hikari.HikariDataSource [Thread-149] HikariPool-38 - Shutdown completed.
+2022-03-01 22:11:27,658 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 10432 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 22:11:27,658 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 22:11:28,032 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 22:11:28,032 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 22:11:28,052 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 22:11:28,079 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 22:11:28,083 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-39 - Starting...
+2022-03-01 22:11:28,133 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-39 - Start completed.
+2022-03-01 22:11:28,133 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 22:11:28,168 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 22:11:28,463 INFO com.abc.inning.InningServiceApplication [restartedMain] Started InningServiceApplication in 0.83 seconds (JVM running for 9991.518)
+2022-03-01 22:11:51,428 INFO com.zaxxer.hikari.HikariDataSource [Thread-153] HikariPool-39 - Shutdown initiated...
+2022-03-01 22:11:51,431 INFO com.zaxxer.hikari.HikariDataSource [Thread-153] HikariPool-39 - Shutdown completed.
+2022-03-01 22:11:51,519 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 10432 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 22:11:51,520 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 22:11:51,958 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 22:11:51,958 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 22:11:51,978 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 22:11:52,005 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 22:11:52,011 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-40 - Starting...
+2022-03-01 22:11:52,060 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-40 - Start completed.
+2022-03-01 22:11:52,060 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 22:11:52,105 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 22:11:52,456 INFO com.abc.inning.InningServiceApplication [restartedMain] Started InningServiceApplication in 0.962 seconds (JVM running for 10015.51)
+2022-03-01 22:11:58,988 INFO com.zaxxer.hikari.HikariDataSource [Thread-157] HikariPool-40 - Shutdown initiated...
+2022-03-01 22:11:58,991 INFO com.zaxxer.hikari.HikariDataSource [Thread-157] HikariPool-40 - Shutdown completed.
+2022-03-01 22:11:59,079 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 10432 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 22:11:59,079 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 22:11:59,478 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 22:11:59,478 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 22:11:59,498 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 22:11:59,528 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 22:11:59,533 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-41 - Starting...
+2022-03-01 22:11:59,586 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-41 - Start completed.
+2022-03-01 22:11:59,586 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 22:11:59,625 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 22:11:59,900 INFO com.abc.inning.InningServiceApplication [restartedMain] Started InningServiceApplication in 0.844 seconds (JVM running for 10022.954)
+2022-03-01 22:12:23,879 INFO com.zaxxer.hikari.HikariDataSource [Thread-161] HikariPool-41 - Shutdown initiated...
+2022-03-01 22:12:23,882 INFO com.zaxxer.hikari.HikariDataSource [Thread-161] HikariPool-41 - Shutdown completed.
+2022-03-01 22:12:23,971 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 10432 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 22:12:23,971 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 22:12:24,447 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 22:12:24,447 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 22:12:24,467 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 22:12:24,496 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 22:12:24,501 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-42 - Starting...
+2022-03-01 22:12:24,550 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-42 - Start completed.
+2022-03-01 22:12:24,550 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 22:12:24,589 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 22:12:24,935 INFO com.abc.inning.InningServiceApplication [restartedMain] Started InningServiceApplication in 0.989 seconds (JVM running for 10047.989)
+2022-03-01 22:12:44,081 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [http-nio-8090-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-01 22:28:47,669 INFO com.zaxxer.hikari.HikariDataSource [Thread-165] HikariPool-42 - Shutdown initiated...
+2022-03-01 22:28:47,674 INFO com.zaxxer.hikari.HikariDataSource [Thread-165] HikariPool-42 - Shutdown completed.
+2022-03-01 22:28:47,772 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 10432 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 22:28:47,772 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 22:28:48,150 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 22:28:48,150 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 22:28:48,172 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 22:28:48,202 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 22:28:48,207 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-43 - Starting...
+2022-03-01 22:28:48,255 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-43 - Start completed.
+2022-03-01 22:28:48,255 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 22:28:48,293 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 22:28:48,652 INFO com.abc.inning.InningServiceApplication [restartedMain] Started InningServiceApplication in 0.908 seconds (JVM running for 11031.707)
+2022-03-01 22:32:05,813 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [http-nio-8090-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-01 22:39:17,079 INFO com.zaxxer.hikari.HikariDataSource [Thread-169] HikariPool-43 - Shutdown initiated...
+2022-03-01 22:39:17,083 INFO com.zaxxer.hikari.HikariDataSource [Thread-169] HikariPool-43 - Shutdown completed.
+2022-03-01 22:39:17,196 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 10432 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 22:39:17,197 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 22:39:17,574 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 22:39:17,574 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 22:39:17,594 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 22:39:17,624 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 22:39:17,628 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-44 - Starting...
+2022-03-01 22:39:17,674 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-44 - Start completed.
+2022-03-01 22:39:17,674 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 22:39:17,709 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 22:39:18,165 INFO com.abc.inning.InningServiceApplication [restartedMain] Started InningServiceApplication in 1.017 seconds (JVM running for 11661.22)
+2022-03-01 22:40:32,312 INFO com.zaxxer.hikari.HikariDataSource [Thread-173] HikariPool-44 - Shutdown initiated...
+2022-03-01 22:40:32,316 INFO com.zaxxer.hikari.HikariDataSource [Thread-173] HikariPool-44 - Shutdown completed.
+2022-03-01 22:40:32,405 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 10432 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 22:40:32,405 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 22:40:32,751 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 22:40:32,751 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 22:40:32,771 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 22:40:32,798 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 22:40:32,802 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-45 - Starting...
+2022-03-01 22:40:32,852 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-45 - Start completed.
+2022-03-01 22:40:32,852 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 22:40:33,060 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 22:40:33,377 INFO com.abc.inning.InningServiceApplication [restartedMain] Started InningServiceApplication in 0.996 seconds (JVM running for 11736.432)
+2022-03-01 22:42:52,364 INFO com.zaxxer.hikari.HikariDataSource [Thread-177] HikariPool-45 - Shutdown initiated...
+2022-03-01 22:42:52,370 INFO com.zaxxer.hikari.HikariDataSource [Thread-177] HikariPool-45 - Shutdown completed.
+2022-03-01 22:42:52,479 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 10432 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 22:42:52,479 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 22:42:52,852 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 22:42:52,852 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 22:42:52,873 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 22:42:52,901 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 22:42:52,905 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-46 - Starting...
+2022-03-01 22:42:52,955 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-46 - Start completed.
+2022-03-01 22:42:52,955 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 22:42:52,995 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 22:42:53,250 INFO com.abc.inning.InningServiceApplication [restartedMain] Started InningServiceApplication in 0.799 seconds (JVM running for 11876.305)
+2022-03-01 22:43:41,372 INFO com.zaxxer.hikari.HikariDataSource [Thread-181] HikariPool-46 - Shutdown initiated...
+2022-03-01 22:43:41,382 INFO com.zaxxer.hikari.HikariDataSource [Thread-181] HikariPool-46 - Shutdown completed.
+2022-03-01 22:43:41,476 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 10432 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 22:43:41,476 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 22:43:41,828 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 22:43:41,829 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 22:43:41,849 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 22:43:41,876 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 22:43:41,880 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-47 - Starting...
+2022-03-01 22:43:41,928 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-47 - Start completed.
+2022-03-01 22:43:41,928 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 22:43:41,967 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 22:43:42,249 INFO com.abc.inning.InningServiceApplication [restartedMain] Started InningServiceApplication in 0.799 seconds (JVM running for 11925.304)
+2022-03-01 22:43:58,938 INFO com.zaxxer.hikari.HikariDataSource [Thread-185] HikariPool-47 - Shutdown initiated...
+2022-03-01 22:43:58,942 INFO com.zaxxer.hikari.HikariDataSource [Thread-185] HikariPool-47 - Shutdown completed.
+2022-03-01 22:43:59,033 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 10432 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 22:43:59,033 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 22:43:59,401 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 22:43:59,402 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 22:43:59,441 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 22:43:59,482 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 22:43:59,486 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-48 - Starting...
+2022-03-01 22:43:59,534 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-48 - Start completed.
+2022-03-01 22:43:59,535 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 22:43:59,568 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 22:43:59,911 INFO com.abc.inning.InningServiceApplication [restartedMain] Started InningServiceApplication in 0.904 seconds (JVM running for 11942.966)
+2022-03-01 22:44:19,440 INFO com.zaxxer.hikari.HikariDataSource [Thread-189] HikariPool-48 - Shutdown initiated...
+2022-03-01 22:44:19,443 INFO com.zaxxer.hikari.HikariDataSource [Thread-189] HikariPool-48 - Shutdown completed.
+2022-03-01 22:44:19,532 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 10432 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 22:44:19,533 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 22:44:20,011 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 22:44:20,011 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 22:44:20,033 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 22:44:20,061 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 22:44:20,066 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-49 - Starting...
+2022-03-01 22:44:20,115 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-49 - Start completed.
+2022-03-01 22:44:20,115 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 22:44:20,153 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 22:44:20,427 INFO com.abc.inning.InningServiceApplication [restartedMain] Started InningServiceApplication in 0.92 seconds (JVM running for 11963.482)
+2022-03-01 22:45:01,263 INFO com.zaxxer.hikari.HikariDataSource [Thread-193] HikariPool-49 - Shutdown initiated...
+2022-03-01 22:45:01,267 INFO com.zaxxer.hikari.HikariDataSource [Thread-193] HikariPool-49 - Shutdown completed.
+2022-03-01 22:45:01,369 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 10432 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 22:45:01,369 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 22:45:01,732 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 22:45:01,732 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 22:45:01,752 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 22:45:01,783 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 22:45:01,787 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-50 - Starting...
+2022-03-01 22:45:01,837 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-50 - Start completed.
+2022-03-01 22:45:01,837 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 22:45:01,871 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 22:45:02,200 INFO com.abc.inning.InningServiceApplication [restartedMain] Started InningServiceApplication in 0.859 seconds (JVM running for 12005.255)
+2022-03-01 22:45:58,837 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(175)-127.0.0.1] HikariPool-50 - Shutdown initiated...
+2022-03-01 22:45:58,841 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(175)-127.0.0.1] HikariPool-50 - Shutdown completed.
+2022-03-01 22:46:06,275 INFO com.abc.inning.InningServiceApplication [restartedMain] Starting InningServiceApplication using Java 17.0.1 on Rushi with PID 11812 (C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service\target\classes started by pcc in C:\Users\pcc\Desktop\Project\innings-mocroservice\inning-service)
+2022-03-01 22:46:06,277 INFO com.abc.inning.InningServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-01 22:46:07,956 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-01 22:46:07,956 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-01 22:46:08,056 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/worldcup] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-01 22:46:08,245 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-01 22:46:08,297 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-03-01 22:46:08,464 INFO org.hibernate.annotations.common.Version [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-01 22:46:08,570 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2022-03-01 22:46:08,758 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2022-03-01 22:46:08,789 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-03-01 22:46:09,749 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-01 22:46:10,947 INFO com.abc.inning.InningServiceApplication [restartedMain] Started InningServiceApplication in 5.106 seconds (JVM running for 6.035)

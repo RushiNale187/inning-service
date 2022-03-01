@@ -1,0 +1,11 @@
+package com.abc.inning.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.abc.inning.entity.InningEntity;
+
+@Repository
+public interface InningRepository extends JpaRepository<InningEntity,Integer>
+{
+
+}

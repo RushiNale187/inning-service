@@ -1,0 +1,48 @@
+package com.abc.inning.model;
+
+public class Inning 
+{
+	private int inningId;
+	private int extras;
+	private int totalScore;
+	private int totalWicket;
+	private String teamName;
+	private String inningStatus;
+	
+	public int getInningId() {
+		return inningId;
+	}
+	public void setInningId(int inningId) {
+		this.inningId = inningId;
+	}
+	public int getExtras() {
+		return extras;
+	}
+	public void setExtras(int extras) {
+		this.extras = extras;
+	}
+	public int getTotalScore() {
+		return totalScore;
+	}
+	public void setTotalScore(int totalScore) {
+		this.totalScore = totalScore;
+	}
+	public int getTotalWicket() {
+		return totalWicket;
+	}
+	public void setTotalWicket(int totalWicket) {
+		this.totalWicket = totalWicket;
+	}
+	public String getTeamName() {
+		return teamName;
+	}
+	public void setTeamName(String teamName) {
+		this.teamName = teamName;
+	}
+	public String getInningStatus() {
+		return inningStatus;
+	}
+	public void setInningStatus(String inningStatus) {
+		this.inningStatus = inningStatus;
+	}
+}

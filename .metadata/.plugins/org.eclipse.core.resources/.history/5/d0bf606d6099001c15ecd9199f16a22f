@@ -1,0 +1,40 @@
+package com.abc.inning.service;
+
+import java.util.List;
+
+import com.abc.inning.model.Inning;
+
+public class InningServiceImpl implements InningService
+{
+
+	@Override
+	public Inning saveInning(Inning inning) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	/*@Override
+	public List<Inning> getAllInning() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Inning getInningById(int iiningId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteInning(int inningId) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Inning updateInning(Inning inning) {
+		// TODO Auto-generated method stub
+		return null;
+	}*/
+
+}

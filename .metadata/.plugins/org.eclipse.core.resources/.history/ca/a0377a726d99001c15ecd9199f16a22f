@@ -1,0 +1,5 @@
+package com.abc.inning.exception;
+
+public class GlobalExceptionHandler {
+
+}

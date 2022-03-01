@@ -1,0 +1,6 @@
+package com.abc.inning.repository;
+
+public interface ProductRepository extends JpaRepository<InningEntity,Integer>
+{
+
+}

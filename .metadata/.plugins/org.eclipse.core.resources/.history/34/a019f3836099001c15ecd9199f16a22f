@@ -1,0 +1,48 @@
+package com.abc.inning.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.abc.inning.entity.InningEntity;
+import com.abc.inning.model.Inning;
+import com.abc.inning.repository.InningRepository;
+import com.abc.inning.util.EntityModelUtil;
+
+public class InningServiceImpl implements InningService
+{
+	@Autowired
+	private InningRepository  inningRepository;
+	
+	@Override
+	public Inning saveInning(Inning inning) 
+	{
+		InningEntity inningEntity = inningRepository.save(EntityModelUtil.inningModelToEntity(inning));
+		return EntityModelUtil.inningEntityToModel(inningEntity);
+	}
+
+	/*@Override
+	public List<Inning> getAllInning() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Inning getInningById(int iiningId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteInning(int inningId) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Inning updateInning(Inning inning) {
+		// TODO Auto-generated method stub
+		return null;
+	}*/
+
+}

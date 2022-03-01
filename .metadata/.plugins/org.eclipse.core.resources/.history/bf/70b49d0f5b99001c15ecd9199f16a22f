@@ -1,0 +1,11 @@
+package com.abc.inning.model;
+
+public class Inning 
+{
+	private int inningId;
+	private int extras;
+	private int totalScore;
+	private int totalWicket;
+	private String teamName;
+	private String inningStatus;
+}

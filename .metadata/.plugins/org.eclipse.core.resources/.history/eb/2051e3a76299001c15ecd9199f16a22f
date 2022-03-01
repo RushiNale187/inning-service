@@ -1,0 +1,22 @@
+package com.abc.inning.controller;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.abc.inning.model.Inning;
+
+@RestController
+@RequestMapping("/inning")
+public class InningController 
+{
+	private InningService i;
+	
+	@PostMapping("/save")
+	public ResponseEntity<Inning> addInning(@RequestBody Inning inning)
+	{
+		
+	}
+}

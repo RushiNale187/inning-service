@@ -1,0 +1,21 @@
+package com.abc.inning.util;
+
+import com.abc.inning.entity.InningEntity;
+import com.abc.inning.model.Inning;
+
+public class EntityModelUtil 
+{
+	public static InningEntity inningModelToEntity(Inning inning)
+	{
+		InningEntity inningEntity = new InningEntity();
+		
+		inningEntity.setInningId(inning.getInningId());
+		inningEntity.setExtras(inning.getExtras());
+		inningEntity.setTotalScore(inning.getTotalScore());
+		inningEntity.setTotalWicket(inning.getTotalWicket());
+		inningEntity.setTeamName(inning.getTeamName());
+		inningEntity.setInningStatus(inning.getInningStatus());
+		
+		return inningEntity;
+	}
+}

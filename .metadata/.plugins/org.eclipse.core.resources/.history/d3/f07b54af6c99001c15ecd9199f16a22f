@@ -1,0 +1,38 @@
+package com.abc.inning.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.abc.inning.model.Inning;
+import com.abc.inning.service.InningService;
+
+@RestController
+@RequestMapping("/inning")
+public class InningController 
+{
+	@Autowired
+	private InningService inningService;
+	
+	@PostMapping("/save")
+	public ResponseEntity<Inning> addInning(@RequestBody Inning inning)
+	{
+		Inning newInning = inningService.saveInning(inning);
+		ResponseEntity<Inning> responseEntity = new ResponseEntity<Inning>(newInning, HttpStatus.CREATED);
+		return responseEntity;
+	}
+	
+	@GetMapping("/all")
+	public List<Inning> getAllInningDetails()
+	{
+		List<Inning> allInning = inningService.getAllInning();
+		return allInning;
+	}
+}

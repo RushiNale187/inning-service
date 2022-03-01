@@ -1,0 +1,33 @@
+package com.abc.inning.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="inning_tbl")
+public class InningEntity 
+{
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="inning_id")
+	private int inningId;
+	
+	@Column(name="extras")
+	private int extras;
+	
+	@Column(name="total_score")
+	private int totalScore;
+	
+	@Column(name="total_wicket")
+	private int totalWicket;
+	
+	@Column(name="team_name")
+	private String teamName;
+	
+	@Column(name="inning_status")
+	private String inningStatus;
+}
